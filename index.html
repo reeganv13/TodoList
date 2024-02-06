@@ -1,0 +1,81 @@
+
+<link rel="stylesheet" href="style.css">
+<center>
+<h1>Student Form</h1>
+
+
+<div >
+    <form id="studentForm">
+    <table>
+<tr>
+     <td><label >Name</label></td>
+    <td><input type="text" id="input1"></td>
+</tr>
+<tr> 
+    <td><label >Age</label></td>
+    <td><input type="number" id="Age"></td>
+</tr>
+<tr> 
+    <td><label >Gender</label></td>
+    <td><input type="radio"  id="Male" value="Male" name="Gender">Male
+    <input type="radio" id="Female" value="Female" name="Gender" >Female</td>
+</tr>
+<tr> 
+    <td><label >Course</label></td>
+    <td><select name="" id="select">
+        <option  value="javascript">javascript</option>
+        <option  value="Html">Html</option>
+        <option  value="Css">Css</option></select>
+    </td>
+</tr>
+<tr> 
+    <td><label >Email</label></td>
+    <td><input type="email" id="email"></td>
+</tr>
+</table>
+<button type="button" onclick="add()" class="save">save</button>
+</form>
+</div>
+</center>
+<center>
+<div class="container2">
+    <table id="outputTable">
+        <tr>
+          <td> Name</td>
+          <td>Age</td> 
+          <td>Gender</td>
+          <td>Course</td>
+          <td>Email</td> 
+          <td>Action</td>
+        </tr>
+    </table>
+
+</div>
+ 
+</center>
+ <script>
+    var studentForm=document.getElementById("studentForm")
+    var outputTable=document.getElementById("outputTable")
+
+function add(){
+
+    var newRow=outputTable.insertRow()
+     newRow.insertCell().textContent=document.getElementById("input1").value
+newRow.insertCell().textContent=document.getElementById("Age").value
+newRow.insertCell().textContent=document.querySelector('input[name="Gender"]:checked').value
+
+newRow.insertCell().textContent=document.getElementById("select").value
+newRow.insertCell().textContent=document.getElementById("email").value
+
+var deleteButton=document.createElement("button")
+deleteButton.textContent="Delete"
+deleteButton.onclick=function(){
+    outputTable.deleteRow(newRow.rowIndex)
+}
+newRow.insertCell().appendChild(deleteButton)
+
+studentForm.reset();
+ 
+}
+
+ </script>

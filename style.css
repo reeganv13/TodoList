@@ -1,0 +1,50 @@
+
+label{
+    font-weight: bold;
+}
+#studentForm{
+  border: 3px;
+  border-color:grey;
+  border-style: solid;
+  display: inline-block;
+  padding: 5px;
+}
+td{
+    border: 2px;
+    border-color: grey;
+    border-style: solid;
+}
+td,label{
+    text-align: center;
+}
+#select{
+    width:170px;
+}
+.save{
+    border: 2px;
+    border-style: solid;
+    border-color: grey;
+    width: 233px;
+    background-color: rgb(120, 241, 196);
+}
+.output{
+    border: 2px;
+    border-style: solid;
+    border-color: grey;
+    margin-top: 20px;
+    display: inline-block;
+    justify-content: center;
+    
+    
+}
+.output td{
+
+    padding: 5px;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+}
+button{
+    background-color: red;
+    display: inline-block;
+}
