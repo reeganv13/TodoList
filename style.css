@@ -37,12 +37,15 @@ td,label{
     
     
 }
-.output td{
+#outputTable th{
 
     padding: 5px;
     font-weight: bold;
     width: 150px;
     height: 30px;
+    border: 2px;
+    border-color: grey;
+    border-style: solid;
 }
 button{
     background-color: red;
